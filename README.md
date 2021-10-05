@@ -27,7 +27,7 @@ AmZetta Technologies is a software developer providing secure endpoint solutions
 -------------------------------------------------------------------------------
 What product or service is this for:
 -------------------------------------------------------------------------------
-[Snap OS (customized Ubuntu Linux distribution) Linux software endpoint solution by AmZetta Technologies. ]
+[Snap OS (Customized Linux distribution) Linux software endpoint solution by AmZetta Technologies. ]
 
 -------------------------------------------------------------------------------
 What's the justification that this really does need to be signed for the whole world to be able to boot it:

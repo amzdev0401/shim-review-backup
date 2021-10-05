@@ -27,34 +27,33 @@ AmZetta Technologies is a software developer providing secure endpoint solutions
 -------------------------------------------------------------------------------
 What product or service is this for:
 -------------------------------------------------------------------------------
-[LEAF OS Linux software endpoint solution by NComputing. ]
+[Snap OS (customized Ubuntu Linux distribution) Linux software endpoint solution by AmZetta Technologies. ]
 
 -------------------------------------------------------------------------------
 What's the justification that this really does need to be signed for the whole world to be able to boot it:
 -------------------------------------------------------------------------------
-[NComputing LEAF OS is a Linux software endpoint solution that transforms any x86-64 PC, laptop, or thin client into a secure and centrally managed endpoint to access popular desktop virtualization environments, including Microsoft Azure Virtual Desktop (AVD), Windows 365 Cloud PC, Microsoft Remote Desktop Services (RDS) and others.  LEAF OS solution is available worldwide, covering education, SMB, SME and enterprise customers. 
+[AmZetta Technologies Snap OS is a Linux software endpoint solution that transforms any x86-64 PC, laptop, or thin client into a secure and centrally managed endpoint to access popular desktop virtualization environments, including Microsoft Azure Virtual Desktop (AVD), Windows 365 Cloud PC, Microsoft Remote Desktop Services (RDS) and others Snap OS solution will be available worldwide, covering education, SMB, SME and enterprise customers.
 
-LEAF OS endpoint solution addresses concerns related to security, corporate data leakage, patch management and central manageability for companies with working-from-home and BYOD initiatives using personal devices.  A bootable USB memory stick can be created containing LEAF OS. Any x86-64 hardware device can secure boot to LEAF OS and instantly becomes a locked-down LEAF OS thin client. 
+Snap OS endpoint solution addresses concerns related to security, corporate data leakage, patch management and central manageability for companies with working-from-home and BYOD initiatives using personal devices. A bootable USB memory stick can be created containing Snap OS. Any x86-64 hardware device can secure boot to Snap OS and instantly becomes a locked-down Snap OS thin client.
 
-LEAF OS can be used to repurpose PCs and laptops by converting any x86-64 hardware from a stand-alone computer to a dedicated thin client by installing directly onto an internal hard drive and removing the old system and files. This method extends the usefulness of aging computers using end-of-life operating systems like Windows 7 while giving users powerful up-to-date desktops. 
+Snap OS can be used to repurpose PCs and laptops by converting any x86-64 hardware from a stand-alone computer to a dedicated thin client by installing directly onto an internal hard drive and removing the old system and files. This method extends the usefulness of aging computers using end-of-life operating systems like Windows 7 while giving users powerful up-to-date desktops.
 
-NComputing would like customers to be able to run LEAFOS Linux endpoint on any x86-64 devices without disabling Secure Boot.]
+AmZetta Technologies would like customers to be able to run Snap OS Linux endpoint on any x86-64 devices without disabling Secure Boot.
+]
 
 -------------------------------------------------------------------------------
 Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
-    - Name: Frank Pesek 
-    - Position: Chief Software Architect 
-    - Email address: fpesek@ncomputing.com 
-    - PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community: file in repo FrankPesek.pub  
+    - Name: Loganathan Ranganathan 
+    - Position: Engineering Manager III 
+    - Email address: loganathanr@amzetta.com 
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
-    - Name: Richard Sah 
-    - Position: Chief Technology Officer 
-    - Email address: rsah@ncomputing.com 
-    - PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community: file in repo RichardSah.pub  
+    - Name: Justine Bagby 
+    - Position: Director - Sales 
+    - Email address: JustinB@amzetta.com 
 
 -------------------------------------------------------------------------------
 Please create your shim binaries starting with the 15.4 shim release tar file:
@@ -68,7 +67,7 @@ the appropriate gnu-efi source.
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-[https://github.com/ncboot/shim.git, tag rel-v15.4]
+[https://github.com/amzdev0401/shim.git, tag main]
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -140,12 +139,12 @@ apply. Please describe your strategy.
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 If the shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case and the differences would be.
 -------------------------------------------------------------------------------
-[Ubuntu 16.4 or above with Docker, run make-shim.sh]
+[Ubuntu 18.04 or above with Docker, run make-shim.sh]
 
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
-[Output of make-shim.sh script is https://github.com/ncboot/shim-review/blob/master/build.log]
+[Output of make-shim.sh script is https://github.com/amzdev0401/shim-review/blob/main/build.log]
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim

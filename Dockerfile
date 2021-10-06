@@ -8,10 +8,11 @@ LABEL VERSION ="1.0"
 LABEL DESCRIPTION ="Docker Image To build Shim 15.04 for AmZetta Technologies."
 
 WORKDIR /opt
-RUN  git clone --recursive -b main https://github.com/amzdev0401/shim.git shim
+RUN  git clone --recursive -b Ver-15.4 https://github.com/amzdev0401/shim.git shim
 WORKDIR /opt/shim
-RUN curl -O  https://github.com/amzdev0401/shim-review/main/amzetta.der
-RUN make VENDOR_CERT_FILE=amzetta.der
+
+RUN curl -O https://github.com/amzdev0401/shim-review/tree/Amzetta-shim-X86_64-shim-15.4/AMZ.cer
+RUN make VENDOR_CERT_FILE=AMZ.cer
 RUN sha256sum shimx64.efi
 RUN objdump -s -j .sbat shimx64.efi
 

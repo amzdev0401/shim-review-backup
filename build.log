@@ -1,5 +1,4 @@
-Sending build context to Docker daemon  3.584kB
-
+Sending build context to Docker daemon  1.071MB
 Step 1/13 : FROM ubuntu:18.04
 18.04: Pulling from library/ubuntu
 284055322776: Pull complete
@@ -7,35 +6,35 @@ Digest: sha256:bfb4cabd667790ead5c95d9fe341937f0c21118fa79bc768d51c5da9d1dbe917
 Status: Downloaded newer image for ubuntu:18.04
  ---> 5a214d77f5d7
 Step 2/13 : LABEL MAINTAINER AmZetta Technologies <sales@amzetta.com>
- ---> Running in 01a63e7a7d1e
-Removing intermediate container 01a63e7a7d1e
- ---> 31d1150567fa
+ ---> Running in db4dfa01afd2
+Removing intermediate container db4dfa01afd2
+ ---> e2d644f3c2a8
 Step 3/13 : RUN apt-get update
- ---> Running in ed978fcd5766
+ ---> Running in cda956bdced3
 Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
 Get:2 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]
-Get:3 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [2365 kB]
-Get:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
-Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
-Get:6 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
-Get:7 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
-Get:8 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1430 kB]
-Get:9 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [26.7 kB]
-Get:10 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [606 kB]
-Get:11 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
-Get:12 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:3 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [26.7 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [606 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:6 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [2365 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [186 kB]
+Get:9 http://archive.ubuntu.com/ubuntu bionic/restricted amd64 Packages [13.5 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [11.3 MB]
+Get:11 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1430 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic/main amd64 Packages [1344 kB]
 Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [638 kB]
-Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [34.4 kB]
-Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [2800 kB]
-Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2208 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [2209 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [2801 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [34.4 kB]
 Get:17 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [11.4 kB]
 Get:18 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [11.3 kB]
-Fetched 23.5 MB in 28s (834 kB/s)
+Fetched 23.5 MB in 28s (830 kB/s)
 Reading package lists...
-Removing intermediate container ed978fcd5766
- ---> 519fada5934c
+Removing intermediate container cda956bdced3
+ ---> ea542fbeeeb8
 Step 4/13 : RUN apt-get install -y build-essential git curl
- ---> Running in 622c489d2537
+ ---> Running in 7324b4e3cb81
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -217,7 +216,7 @@ Get:114 http://archive.ubuntu.com/ubuntu bionic/main amd64 libfile-fcntllock-per
 Get:115 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsasl2-modules amd64 2.1.27~101-g0780600+dfsg-3ubuntu2.3 [48.9 kB]
 Get:116 http://archive.ubuntu.com/ubuntu bionic/main amd64 manpages-dev all 4.15-1 [2217 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 66.1 MB in 1min 41s (657 kB/s)
+Fetched 66.1 MB in 1min 36s (692 kB/s)
 Selecting previously unselected package liblocale-gettext-perl.
 (Reading database ... 4051 files and directories currently installed.)
 Preparing to unpack .../0-liblocale-gettext-perl_1.07-3build2_amd64.deb ...
@@ -726,58 +725,58 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container 622c489d2537
- ---> 6af9431c02da
+Removing intermediate container 7324b4e3cb81
+ ---> ed88928a87bc
 Step 5/13 : LABEL VERSION ="1.0"
- ---> Running in 10777323a68d
-Removing intermediate container 10777323a68d
- ---> b06720542a73
+ ---> Running in 23a24a224319
+Removing intermediate container 23a24a224319
+ ---> 3fb639ef8206
 Step 6/13 : LABEL DESCRIPTION ="Docker Image To build Shim 15.04 for AmZetta Technologies."
- ---> Running in e13b65359ed2
-Removing intermediate container e13b65359ed2
- ---> 052393682183
+ ---> Running in f47f24a06532
+Removing intermediate container f47f24a06532
+ ---> f6259ed164d1
 Step 7/13 : WORKDIR /opt
- ---> Running in 79e8228fcad8
-Removing intermediate container 79e8228fcad8
- ---> c55614b1ac39
-Step 8/13 : RUN  git clone --recursive -b main https://github.com/amzdev0401/shim.git shim
- ---> Running in 966be51a13d9
+ ---> Running in 95cadb99314a
+Removing intermediate container 95cadb99314a
+ ---> 5b74e906cb49
+Step 8/13 : RUN  git clone --recursive -b Ver-15.4 https://github.com/amzdev0401/shim.git shim
+ ---> Running in 46538a3893a7
 Cloning into 'shim'...
-Removing intermediate container 966be51a13d9
- ---> 00f28e6ee445
+Removing intermediate container 46538a3893a7
+ ---> 32127c476ecc
 Step 9/13 : WORKDIR /opt/shim
- ---> Running in 9bbd3e7a07a0
-Removing intermediate container 9bbd3e7a07a0
- ---> 4c0ea96d870a
-Step 10/13 : RUN curl -O  https://github.com/amzdev0401/shim-review/main/amzetta.der
- ---> Running in b52ec40c18bf
+ ---> Running in 16151d7c5ea3
+Removing intermediate container 16151d7c5ea3
+ ---> a04786ef0249
+Step 10/13 : RUN curl -O https://github.com/amzdev0401/shim-review/tree/Amzetta-shim-X86_64-shim-15.4/AMZ.cer
+ ---> Running in 13814b19d410
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100     9  100     9    0     0     64      0 --:--:-- --:--:-- --:--:--    65
-Removing intermediate container b52ec40c18bf
- ---> 3d2260ec030f
-Step 11/13 : RUN make VENDOR_CERT_FILE=amzetta.der
- ---> Running in d3ccec18d7f9
+100   150  100   150    0     0    892      0 --:--:-- --:--:-- --:--:--   898
+Removing intermediate container 13814b19d410
+ ---> 456fb3740456
+Step 11/13 : RUN make VENDOR_CERT_FILE=AMZ.cer
+ ---> Running in 420a70c99f96
 sed     -e "s,@@VERSION@@,15.4," \
         -e "s,@@UNAME@@,Linux x86_64 x86_64 x86_64 GNU/Linux," \
-        -e "s,@@COMMIT@@,98ad9ba96ced347691b38bd79075162185212e5d," \
+        -e "s,@@COMMIT@@,4885ab3c6f81a8d152e618ab366d1e82609a3bda," \
         < /opt/shim/version.c.in > version.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o shim.o shim.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o mok.o mok.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o netboot.o netboot.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\" -c -o cert.o /opt/shim/cert.S
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o replacements.o replacements.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o tpm.o tpm.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o version.o version.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o errlog.o errlog.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o sbat.o sbat.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\" -x c -c -o sbat_data.o /dev/null
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o shim.o shim.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o mok.o mok.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o netboot.o netboot.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\" -c -o cert.o /opt/shim/cert.S
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o replacements.o replacements.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o tpm.o tpm.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o version.o version.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o errlog.o errlog.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o sbat.o sbat.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\" -x c -c -o sbat_data.o /dev/null
 objcopy --add-section .sbat=/opt/shim/data/sbat.csv \
         --set-section-flags .sbat=contents,alloc,load,readonly,data \
         sbat_data.o
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o pe.o pe.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o httpboot.o httpboot.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o csv.o csv.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o pe.o pe.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o httpboot.o httpboot.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o csv.o csv.c
 for i in Hash Hmac Cipher Rand Pk Pem SysCall; do mkdir -p Cryptlib/$i; done
 make TOPDIR=/opt/shim VPATH=/opt/shim/Cryptlib -C Cryptlib -f /opt/shim/Cryptlib/Makefile
 make[1]: Entering directory '/opt/shim/Cryptlib'
@@ -1334,7 +1333,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000186036 s, 21.5 kB/s
+4 bytes copied, 0.00035989 s, 11.1 kB/s
 objcopy -D -j .text -j .sdata -j .data \
         -j .dynamic -j .rodata -j .rel* \
         -j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -1342,9 +1341,9 @@ objcopy -D -j .text -j .sdata -j .data \
         -j .debug_line -j .debug_str -j .debug_ranges \
         -j .note.gnu.build-id \
         shimx64.so shimx64.efi.debug
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o MokManager.o MokManager.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o PasswordCrypt.o PasswordCrypt.c
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o crypt_blowfish.o crypt_blowfish.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o MokManager.o MokManager.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o PasswordCrypt.o PasswordCrypt.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o crypt_blowfish.o crypt_blowfish.c
 ld -o mmx64.so --hash-style=sysv -nostdlib -znocombreloc -T /opt/shim/elf_x86_64_efi.lds -shared -Bsymbolic -Lgnu-efi/x86_64/gnuefi -Lgnu-efi/x86_64/lib -LCryptlib -LCryptlib/OpenSSL gnu-efi/x86_64/gnuefi/crt0-efi-x86_64.o --build-id=sha1  --no-undefined MokManager.o PasswordCrypt.o crypt_blowfish.o errlog.o sbat_data.o Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a lib/lib.a gnu-efi/x86_64/lib/libefi.a gnu-efi/x86_64/gnuefi/libgnuefi.a -lefi -lgnuefi --start-group Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a --end-group /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a lib/lib.a
 objcopy -D -j .text -j .sdata -j .data \
         -j .dynamic -j .rodata -j .rel* \
@@ -1353,7 +1352,7 @@ objcopy -D -j .text -j .sdata -j .data \
         -j .debug_line -j .debug_str -j .debug_ranges \
         -j .note.gnu.build-id \
         mmx64.so mmx64.efi.debug
-gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"amzetta.der\"   -c -o fallback.o fallback.c
+gcc -std=gnu11 -ggdb -ffreestanding -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/opt/shim/Cryptlib -I/opt/shim/Cryptlib/Include -I/opt/shim/gnu-efi/inc -I/opt/shim/gnu-efi/inc/x86_64 -I/opt/shim/gnu-efi/inc/protocol -I/opt/shim/include -iquote /opt/shim -iquote /opt/shim -isystem /opt/shim/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/7/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"AMZ.cer\"   -c -o fallback.o fallback.c
 ld -o fbx64.so --hash-style=sysv -nostdlib -znocombreloc -T /opt/shim/elf_x86_64_efi.lds -shared -Bsymbolic -Lgnu-efi/x86_64/gnuefi -Lgnu-efi/x86_64/lib -LCryptlib -LCryptlib/OpenSSL gnu-efi/x86_64/gnuefi/crt0-efi-x86_64.o --build-id=sha1  --no-undefined fallback.o tpm.o errlog.o sbat_data.o Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a lib/lib.a gnu-efi/x86_64/lib/libefi.a gnu-efi/x86_64/gnuefi/libgnuefi.a -lefi -lgnuefi --start-group Cryptlib/libcryptlib.a Cryptlib/OpenSSL/libopenssl.a --end-group /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a lib/lib.a
 objcopy -D -j .text -j .sdata -j .data \
         -j .dynamic -j .rodata -j .rel* \
@@ -1371,7 +1370,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000336759 s, 11.9 kB/s
+4 bytes copied, 0.000138008 s, 29.0 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
         -j .dynamic -j .rodata -j .rel* \
         -j .rela* -j .reloc -j .eh_frame \
@@ -1381,16 +1380,16 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000279748 s, 14.3 kB/s
-Removing intermediate container d3ccec18d7f9
- ---> 8b8cd3f56787
+4 bytes copied, 0.000218358 s, 18.3 kB/s
+Removing intermediate container 420a70c99f96
+ ---> a4c8758cd8bb
 Step 12/13 : RUN sha256sum shimx64.efi
- ---> Running in b836bf2fe202
-928440473b855357e7ee31fcc2aa9db7b71bb3fb19ef45066789bbfa6550ebe4  shimx64.efi
-Removing intermediate container b836bf2fe202
- ---> 76f6d6a27339
+ ---> Running in 27b065f290fa
+a271318fcf86a7b716bf873b7a66d016e976fc5b96baa9278fd0041745074f4d  shimx64.efi
+Removing intermediate container 27b065f290fa
+ ---> a61d884366b2
 Step 13/13 : RUN objdump -s -j .sbat shimx64.efi
- ---> Running in 96c6a3e11d28
+ ---> Running in 4afcaa30c5ba
 
 shimx64.efi:     file format pei-x86-64
 
@@ -1403,13 +1402,11 @@ Contents of section .sbat:
  cc050 2c312c55 45464920 7368696d 2c736869  ,1,UEFI shim,shi
  cc060 6d2c312c 68747470 733a2f2f 67697468  m,1,https://gith
  cc070 75622e63 6f6d2f72 68626f6f 742f7368  ub.com/rhboot/sh
- cc080 696d0a73 68696d2e 7562756e 74752c31  im.shim.ubuntu,1
- cc090 2c756275 6e74754f 532c7368 696d2c31  ,ubuntuOS,shim,1
- cc0a0 352e342c 6d61696c 3a6c6f67 616e6174  5.4,mail:loganat
- cc0b0 68616e72 40616d7a 65747461 2e636f6d  hanr@amzetta.com
- cc0c0 0a                                   .
-Removing intermediate container 96c6a3e11d28
- ---> 2ce44c27cea3
-Successfully built 2ce44c27cea3
+ cc080 696d0a73 68696d2e 616d7a65 7474612c  im.shim.amzetta,
+ cc090 312c536e 61704f53 2c736869 6d2c3135  1,SnapOS,shim,15
+ cc0a0 2e342c68 74747073 3a2f2f61 6d7a6574  .4,https://amzet
+ cc0b0 74612e63 6f6d0a                      ta.com.
+Removing intermediate container 4afcaa30c5ba
+ ---> 92ee3aee2727
+Successfully built 92ee3aee2727
 Successfully tagged shim-build:latest
-

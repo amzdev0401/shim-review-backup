@@ -21,25 +21,23 @@ Here's the template:
 What organization or people are asking to have this signed:
 -------------------------------------------------------------------------------
 [AmZetta Technologies  
-
-AmZetta Technologies is a software developer providing secure endpoint solutions for companies and organizations worldwide. https://amzetta.com/  ]
+AmZetta Technologies is a software developer providing secure endpoint solutions for companies and organizations worldwide. https://amzetta.com/products/ztc/]
 
 -------------------------------------------------------------------------------
 What product or service is this for:
 -------------------------------------------------------------------------------
-[Snap OS (Customized Linux distribution) Linux software endpoint solution by AmZetta Technologies. ]
+[SnapVDI Thin Client (zTC)-ENDPOINT DEVICES Hardware Thin client product. Powerful hardware components and native compatibility with VMware, Citrix, and Microsoft, as well as Azure and AWS cloud platforms, the AmZetta zTC thin client device seamlessly integrates into virtually any IT environment. Using the included AmZetta Client Manager (SCM) software, administrators can manage, monitor, and secure their entire zTC deployment from a single intuitive interface. More than ever before, businesses today need the ability to adapt to unforeseen circumstances. Equip your company with the agility to adapt without compromising power, compatibility, or security with the AmZetta zTC thin client.
+
+For More info:
+https://amzetta.com/ztc/]
+
 
 -------------------------------------------------------------------------------
 What's the justification that this really does need to be signed for the whole world to be able to boot it:
 -------------------------------------------------------------------------------
-[AmZetta Technologies Snap OS is a Linux software endpoint solution that transforms any x86-64 PC, laptop, or thin client into a secure and centrally managed endpoint to access popular desktop virtualization environments, including Microsoft Azure Virtual Desktop (AVD), Windows 365 Cloud PC, Microsoft Remote Desktop Services (RDS) and others Snap OS solution will be available worldwide, covering education, SMB, SME and enterprise customers.
-
-Snap OS endpoint solution addresses concerns related to security, corporate data leakage, patch management and central manageability for companies with working-from-home and BYOD initiatives using personal devices. A bootable USB memory stick can be created containing Snap OS. Any x86-64 hardware device can secure boot to Snap OS and instantly becomes a locked-down Snap OS thin client.
-
-Snap OS can be used to repurpose PCs and laptops by converting any x86-64 hardware from a stand-alone computer to a dedicated thin client by installing directly onto an internal hard drive and removing the old system and files. This method extends the usefulness of aging computers using end-of-life operating systems like Windows 7 while giving users powerful up-to-date desktops.
-
-AmZetta Technologies would like customers to be able to run Snap OS Linux endpoint on any x86-64 devices without disabling Secure Boot.
-]
+[Snap OS (TAILORED FOR VIRTUAL SPACES from Linux distribution) for Linux software endpoint solution by AmZetta Technologies.
+Snap OS is currently used in Hardware thin clients(zTC), It can be used to Repurposing the old laptop and desktops without any hassle.
+AmZetta Technologies would like customers to be able to run Snap OS Linux endpoint on any x86-64 devices without disabling Secure Boot.]
 
 -------------------------------------------------------------------------------
 Who is the primary contact for security updates, etc.
@@ -67,7 +65,7 @@ the appropriate gnu-efi source.
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-[https://github.com/amzdev0401/shim.git, tag main]
+[https://github.com/amzdev0401/shim.git, tag Ver-15.4]
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -116,7 +114,7 @@ upstream commit 1957a85b0032a81e6482ca4aab883643b8dae06e applied ?
 Is "ACPI: configfs: Disallow loading ACPI tables when locked down"
 upstream commit 75b0cea7bf307f362057cc778efe89af4c615354 applied ?
 -------------------------------------------------------------------------------
-[yes, we have above upstream commits]
+[yes, Kernel 5.10 is used in SnapOS. Kernel 5.10 has "ACPI: configfs: Disallow loading ACPI tables when locked down" fix ]
 
 -------------------------------------------------------------------------------
 If you use vendor_db functionality of providing multiple certificates and/or
@@ -144,7 +142,7 @@ If the shim binaries can't be reproduced using the provided Dockerfile, please e
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
-[Output of make-shim.sh script is https://github.com/amzdev0401/shim-review/blob/main/build.log]
+[Output of make-shim.sh script is https://github.com/amzdev0401/shim-review/blob/Amzetta-shim-X86_64-shim-15.4/build.log]
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim

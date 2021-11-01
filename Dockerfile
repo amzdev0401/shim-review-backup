@@ -10,6 +10,7 @@ LABEL DESCRIPTION ="Docker Image To build Shim 15.04 with Security patches for A
 WORKDIR /opt
 RUN  git clone --recursive -b 15.4 https://github.com/rhboot/shim.git shim
 COPY sbat.csv /opt/shim/data
+COPY AMZ.cer /opt/shim/
 WORKDIR /opt/shim
 
 
@@ -32,7 +33,6 @@ RUN git cherry-pick 9f973e4e95b1136b8c98051dbbdb1773072cc998 -n
 RUN git cherry-pick 4d64389c6c941d21548b06423b8131c872e3c3c7 -n
 
 
-RUN curl -O https://github.com/amzdev0401/shim-review/blob/AmZettaTech-shim-X86_64-shim-15.4/AMZ.cer
 RUN make VENDOR_CERT_FILE=AMZ.cer
 RUN sha256sum shimx64.efi
 RUN objdump -s -j .sbat shimx64.efi

@@ -44,14 +44,16 @@ Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
     - Name: Loganathan Ranganathan 
     - Position: Engineering Manager III 
-    - Email address: loganathanr@amzetta.com 
+    - Email address: loganathanr@amzetta.com
+    - PGP Key ID: 2A2CF3A69E739955 PGP Key Fingerprint: 1920 A439 96A8 431B 6113 E95A 2A2C F3A6 9E73 9955, HKP key server: https://keyserver.ubuntu.com
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
     - Name: Justine Bagby 
     - Position: Director - Sales 
-    - Email address: JustinB@amzetta.com 
+    - Email address: Justinb@amzetta.com
+    - PGP Key ID: 52D3D8F74C848F3A PGP Key Fingerprint: 87F2 B43A F046 F217 11CB 22AA 52D3 D8F7 4C84 8F3A, HKP key server: https://keyserver.ubuntu.com
 
 -------------------------------------------------------------------------------
 Please create your shim binaries starting with the 15.4 shim release tar file:

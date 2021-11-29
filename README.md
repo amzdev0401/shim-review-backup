@@ -21,39 +21,39 @@ Here's the template:
 What organization or people are asking to have this signed:
 -------------------------------------------------------------------------------
 [AmZetta Technologies  
-
-AmZetta Technologies is a software developer providing secure endpoint solutions for companies and organizations worldwide. https://amzetta.com/  ]
+AmZetta Technologies is a software developer providing secure endpoint solutions for companies and organizations worldwide. https://amzetta.com/products/ztc/]
 
 -------------------------------------------------------------------------------
 What product or service is this for:
 -------------------------------------------------------------------------------
-[Snap OS (Customized Linux distribution) Linux software endpoint solution by AmZetta Technologies. ]
+[SnapVDI Thin Client (zTC)-ENDPOINT DEVICES Hardware Thin client product. Powerful hardware components and native compatibility with VMware, Citrix, and Microsoft, as well as Azure and AWS cloud platforms, the AmZetta zTC thin client device seamlessly integrates into virtually any IT environment. Using the included AmZetta Client Manager (SCM) software, administrators can manage, monitor, and secure their entire zTC deployment from a single intuitive interface. More than ever before, businesses today need the ability to adapt to unforeseen circumstances. Equip your company with the agility to adapt without compromising power, compatibility, or security with the AmZetta zTC thin client.
+
+For More info:
+https://amzetta.com/ztc/]
+
 
 -------------------------------------------------------------------------------
 What's the justification that this really does need to be signed for the whole world to be able to boot it:
 -------------------------------------------------------------------------------
-[AmZetta Technologies Snap OS is a Linux software endpoint solution that transforms any x86-64 PC, laptop, or thin client into a secure and centrally managed endpoint to access popular desktop virtualization environments, including Microsoft Azure Virtual Desktop (AVD), Windows 365 Cloud PC, Microsoft Remote Desktop Services (RDS) and others Snap OS solution will be available worldwide, covering education, SMB, SME and enterprise customers.
-
-Snap OS endpoint solution addresses concerns related to security, corporate data leakage, patch management and central manageability for companies with working-from-home and BYOD initiatives using personal devices. A bootable USB memory stick can be created containing Snap OS. Any x86-64 hardware device can secure boot to Snap OS and instantly becomes a locked-down Snap OS thin client.
-
-Snap OS can be used to repurpose PCs and laptops by converting any x86-64 hardware from a stand-alone computer to a dedicated thin client by installing directly onto an internal hard drive and removing the old system and files. This method extends the usefulness of aging computers using end-of-life operating systems like Windows 7 while giving users powerful up-to-date desktops.
-
-AmZetta Technologies would like customers to be able to run Snap OS Linux endpoint on any x86-64 devices without disabling Secure Boot.
-]
+[Snap OS (TAILORED FOR VIRTUAL SPACES from Linux distribution) for Linux software endpoint solution by AmZetta Technologies.
+Snap OS is currently used in Hardware thin clients(zTC), It can be used to Repurposing the old laptop and desktops without any hassle.
+AmZetta Technologies would like customers to be able to run Snap OS Linux endpoint on any x86-64 devices without disabling Secure Boot.]
 
 -------------------------------------------------------------------------------
 Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
     - Name: Loganathan Ranganathan 
     - Position: Engineering Manager III 
-    - Email address: loganathanr@amzetta.com 
+    - Email address: loganathanr@amzetta.com
+    - PGP Key ID: 2A2CF3A69E739955 PGP Key Fingerprint: 1920 A439 96A8 431B 6113 E95A 2A2C F3A6 9E73 9955, HKP key server: https://keyserver.ubuntu.com
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
     - Name: Justine Bagby 
     - Position: Director - Sales 
-    - Email address: JustinB@amzetta.com 
+    - Email address: Justinb@amzetta.com
+    - PGP Key ID: 52D3D8F74C848F3A PGP Key Fingerprint: 87F2 B43A F046 F217 11CB 22AA 52D3 D8F7 4C84 8F3A, HKP key server: https://keyserver.ubuntu.com
 
 -------------------------------------------------------------------------------
 Please create your shim binaries starting with the 15.4 shim release tar file:
@@ -62,17 +62,23 @@ https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
 This matches https://github.com/rhboot/shim/releases/tag/15.4 and contains
 the appropriate gnu-efi source.
 -------------------------------------------------------------------------------
-[yes, our repo is copy of https://github.com/rhboot/shim/releases/tag/15.4]
+[yes, Base code of the SHIM taken from the following repo https://github.com/rhboot/shim/releases/tag/15.4]
 
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-[https://github.com/amzdev0401/shim.git, tag main]
+[https://github.com/rhboot/shim.git, tag 15.4, plus critical commits ]
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-[No patches]
+[Following patches applied]
+5b3ca0d2f7b5f425ba1a14db8ce98b8d95a2f89f Fix a broken file header on ia32 Mar 31 14:54:52 2021
+822d07ad4f07ef66fe447a130e1027c88d02a394 Fix handling of ignore_db and user_insecure_mode Apr 8 22:39:02 2021
+4068fd42c891ea6ebdec056f461babc6e4048844 mok: allocate MOK config table as BootServicesData Apr 8 16:23:03 2021
+493bd940e5c6e28e673034687de7adef9529efff Don't call QueryVariableInfo() on EFI 1.10 machines shim#364 Apr 10 16:05:23 2021
+9f973e4e95b1136b8c98051dbbdb1773072cc998 Relax the check for import_mok_state() May 11 10:41:43 2021
+4d64389c6c941d21548b06423b8131c872e3c3c7 shim: another attempt to fix load options handling Jun 7 16:34:18 2021
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
@@ -116,7 +122,7 @@ upstream commit 1957a85b0032a81e6482ca4aab883643b8dae06e applied ?
 Is "ACPI: configfs: Disallow loading ACPI tables when locked down"
 upstream commit 75b0cea7bf307f362057cc778efe89af4c615354 applied ?
 -------------------------------------------------------------------------------
-[yes, we have above upstream commits]
+[yes, Kernel 5.10 is used in SnapOS. Kernel 5.10 has "ACPI: configfs: Disallow loading ACPI tables when locked down" fix ]
 
 -------------------------------------------------------------------------------
 If you use vendor_db functionality of providing multiple certificates and/or
@@ -144,7 +150,7 @@ If the shim binaries can't be reproduced using the provided Dockerfile, please e
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
-[Output of make-shim.sh script is https://github.com/amzdev0401/shim-review/blob/main/build.log]
+[Output of make-shim.sh script is https://github.com/amzdev0401/shim-review/blob/AmZettaTech-shim-X86_64-shim-15.4/build.log]
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
